@@ -21,8 +21,9 @@ recipeController.post('/create', isAuth, async (req, res) => {
     }
 })
 
-recipeController.get('/catalog', (req, res) => {
-    res.render('recipes/catalog');
+recipeController.get('/catalog', async (req, res) => {
+    const recipes = await recipeService.getAll();
+    res.render('recipes/catalog', { recipes });
 })
 
 export default recipeController;

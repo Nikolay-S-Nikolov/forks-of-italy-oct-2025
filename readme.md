@@ -124,7 +124,7 @@
   - [x] Refactor create post form
   - [x] Add recipesController create post rout and add recipesService
   - [x] Add recipes catalog page
-  - [ ] Add recipes collection rout, service and dynamic data
+  - [x] Add recipes catalog rout, service and dynamic data
   - [ ] add recipes details page, details rout and service
   - [ ] add like recipes rout and service
   - [ ] add is owner middleware

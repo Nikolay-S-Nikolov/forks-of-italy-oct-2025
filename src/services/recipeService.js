@@ -5,5 +5,9 @@ export default {
         formData.owner = userId;
         return Recipe.create(formData);
     },
+
+    getAll(){
+        return Recipe.find();
+    },
     
 }
