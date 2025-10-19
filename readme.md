@@ -112,10 +112,10 @@
  - [x] replace login page
  - [x] replace register page
  - [x] modify user model
- - [ ] modify login and register actions (change username to email)
- - [ ] modify user service (if needed)
- - [ ] modify token generation
- - [ ] relace 404 page
+ - [-] modify login and register actions (change username to email)
+ - [-] modify user service (if needed)
+ - [x] modify token generation
+ - [x] relace 404 page
 
 
 Bonuses

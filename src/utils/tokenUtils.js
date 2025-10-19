@@ -6,6 +6,7 @@ export async function generateAuthToken(user) {
     const payload = {
         id: user.id,
         email: user.email,
+        username: user.username,
     };
 
     const token = await sign(
