@@ -28,11 +28,29 @@ recipeController.get('/catalog', async (req, res) => {
 
 recipeController.get('/:recipeId/details', async (req, res) => {
     const recipeId = req.params.recipeId;
-    const recipe = await recipeService.getOne(recipeId);
-    const totalRecomended = recipe.recommendList.length;
-    const isCreator = recipe.owner.equals(req.user?.id);
-    const isRecommended = recipe.recommendList.some(u => u.equals(req.user?.id));
-    res.render('recipes/details', { recipe, totalRecomended, isCreator, isRecommended });
+
+    try {
+        const recipe = await recipeService.getOne(recipeId);
+        const totalRecomended = recipe.recommendList.length;
+        const isCreator = recipe.owner.equals(req.user?.id);
+        const isRecommended = recipe.recommendList.some(u => u.equals(req.user?.id));
+        res.render('recipes/details', { recipe, totalRecomended, isCreator, isRecommended });
+    } catch (err) {
+        const errorMessage = getErrorMessage(err);
+        res.status(400).render('404', { error: errorMessage });
+    }
+})
+
+recipeController.get('/:recipeId/recommend', isAuth, async (req, res) => {
+    const recipeId = req.params.recipeId;
+    const userId = req.user.id;
+    try {
+        await recipeService.recomend(userId, recipeId);
+        res.redirect(`/recipes/${recipeId}/details`);
+    } catch (err) {
+        const errorMessage = getErrorMessage(err);
+        res.status(400).render('404', { error: errorMessage });
+    }
 })
 
 export default recipeController;

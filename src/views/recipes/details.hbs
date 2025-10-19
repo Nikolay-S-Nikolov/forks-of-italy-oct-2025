@@ -23,15 +23,15 @@
     {{#if isAuthenticated}}
     <div class="command">
         {{#if isCreator}}
-        <a href="/recipes/{{post.id}}/edit">Edit</a>
-        <a href="/recipes/{{post.id}}/delete">Delete</a>
+        <a href="/recipes/{{recipe.id}}/edit">Edit</a>
+        <a href="/recipes/{{recipe.id}}/delete">Delete</a>
         {{else}}
             {{#if isRecommended}}
-            <a href="/recipes/{{post.id}}/recommend">Recommend</a>
-            {{else}}
             <p>You've already recommended this recipe!</p>
+            {{else}}
+            <a href="/recipes/{{recipe.id}}/recommend">Recommend</a>
             {{/if}}
-         {{/if}}
+        {{/if}}
     </div>
     {{/if}}
 </article>
