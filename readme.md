@@ -127,7 +127,7 @@
   - [x] Add recipes catalog rout, service and dynamic data
   - [x] add recipes details page, details rout and service
   - [x] add recommend recipes rout and service
-  - [ ] add is owner middleware
+  - [x] add is owner middleware
   - [ ] add recipes edit logic
   - [ ] add recipes delete logic
   - [ ] add search logic
