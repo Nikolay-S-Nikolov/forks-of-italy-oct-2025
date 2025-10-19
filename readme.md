@@ -121,7 +121,8 @@
   - [x] create Recipe model
   - [x] Add recipesController rout
   - [x] Add create recipes page
-  - [ ] Add recipesController create rout,refactor post form, add recipesService
+  - [x] Refactor create post form
+  - [ ] Add recipesController create post rout and add recipesService
   - [ ] Add recipes collection page
   - [ ] Add recipes collection rout, service and dynamic data
   - [ ] add recipes details page, details rout and service
