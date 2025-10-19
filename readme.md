@@ -123,7 +123,7 @@
   - [x] Add create recipes page
   - [x] Refactor create post form
   - [x] Add recipesController create post rout and add recipesService
-  - [ ] Add recipes collection page
+  - [x] Add recipes catalog page
   - [ ] Add recipes collection rout, service and dynamic data
   - [ ] add recipes details page, details rout and service
   - [ ] add like recipes rout and service
