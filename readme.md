@@ -117,6 +117,20 @@
  - [x] modify token generation
  - [x] relace 404 page
 
+ ## Exam steps
+  - [x] create Recipe model
+  - [ ] Add create recipes create page
+  - [ ] Add recipesController rout
+  - [ ] Add recipesController create rout,refactor post form, add recipesService
+  - [ ] Add recipes collection page
+  - [ ] Add recipes collection rout, service and dynamic data
+  - [ ] add recipes details page, details rout and service
+  - [ ] add like recipes rout and service
+  - [ ] add is owner middleware
+  - [ ] add recipes edit logic
+  - [ ] add recipes delete logic
+  - [ ] add search logic
+
 
 Bonuses
  - [ ] sort by createdAt
