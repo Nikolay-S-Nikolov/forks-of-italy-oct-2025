@@ -26,4 +26,13 @@ recipeController.get('/catalog', async (req, res) => {
     res.render('recipes/catalog', { recipes });
 })
 
+recipeController.get('/:recipeId/details', async (req, res) => {
+    const recipeId = req.params.recipeId;
+    const recipe = await recipeService.getOne(recipeId);
+    const totalRecomended = recipe.recommendList.length;
+    const isCreator = recipe.owner.equals(req.user?.id);
+    const isRecommended = recipe.recommendList.some(u => u.equals(req.user?.id));
+    res.render('recipes/details', { recipe, totalRecomended, isCreator, isRecommended });
+})
+
 export default recipeController;

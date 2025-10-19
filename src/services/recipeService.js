@@ -9,5 +9,9 @@ export default {
     getAll(){
         return Recipe.find();
     },
+
+    getOne(recipeId){
+        return Recipe.findById(recipeId);
+    }
     
 }

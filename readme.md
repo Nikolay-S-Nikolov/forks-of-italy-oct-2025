@@ -125,7 +125,7 @@
   - [x] Add recipesController create post rout and add recipesService
   - [x] Add recipes catalog page
   - [x] Add recipes catalog rout, service and dynamic data
-  - [ ] add recipes details page, details rout and service
+  - [x] add recipes details page, details rout and service
   - [ ] add like recipes rout and service
   - [ ] add is owner middleware
   - [ ] add recipes edit logic
