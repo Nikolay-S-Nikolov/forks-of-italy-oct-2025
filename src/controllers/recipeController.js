@@ -78,4 +78,16 @@ recipeController.post('/:recipeId/edit', isAuth, isOwner, async (req, res) => {
     }
 })
 
+recipeController.get('/:recipeId/delete', isAuth, isOwner, async (req, res) => {
+    const recipeId = req.params.recipeId;
+    try {
+        await recipeService.delete(recipeId);
+        res.redirect('/recipes/catalog');
+    } catch (err) {
+        const errorMessage = getErrorMessage(err);
+        res.status(400).render('404', { error: errorMessage });
+    }
+})
+
+
 export default recipeController;

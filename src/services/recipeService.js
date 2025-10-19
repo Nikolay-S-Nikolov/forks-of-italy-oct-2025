@@ -33,10 +33,15 @@ export default {
         return recipe;
     },
 
-    edit(postId, recipeData) {
+    edit(recipeId, recipeData) {
         const opt = { runValidators: true }
-        const updatedRecipe = Recipe.findByIdAndUpdate(postId, recipeData, opt);
+        const updatedRecipe = Recipe.findByIdAndUpdate(recipeId, recipeData, opt);
         return updatedRecipe;
     },
+
+    delete(recipeId) {
+        return Recipe.findByIdAndDelete(recipeId);
+    },
+
 
 }

@@ -129,7 +129,7 @@
   - [x] add recommend recipes rout and service
   - [x] add is owner middleware
   - [x] add recipes edit logic
-  - [ ] add recipes delete logic
+  - [x] add recipes delete logic
   - [ ] add search logic
 
 
