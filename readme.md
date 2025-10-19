@@ -130,6 +130,7 @@
   - [x] add is owner middleware
   - [x] add recipes edit logic
   - [x] add recipes delete logic
+  - [x] refactor home page and home controller
   - [ ] add search logic
 
 

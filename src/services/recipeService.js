@@ -10,6 +10,10 @@ export default {
         return Recipe.find();
     },
 
+    getLastThree(){
+        return Recipe.find().sort('-_id').limit(3);
+    },
+
     getOne(recipeId) {
         return Recipe.findById(recipeId);
     },
