@@ -6,11 +6,17 @@ export default {
         return Recipe.create(formData);
     },
 
-    getAll() {
-        return Recipe.find();
+    getAll(filter = {}) {
+        let query = Recipe.find()
+
+        if (filter.search) {
+            query = query.find({ title: { $regex: filter.search, $options: 'i' } })
+        }
+
+        return query
     },
 
-    getLastThree(){
+    getLastThree() {
         return Recipe.find().sort('-_id').limit(3);
     },
 

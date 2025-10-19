@@ -89,5 +89,15 @@ recipeController.get('/:recipeId/delete', isAuth, isOwner, async (req, res) => {
     }
 })
 
+recipeController.get('/search', async (req, res) => {
+    const filter = req.query;
+    try {
+        const recipes = await recipeService.getAll(filter);
+        res.render('recipes/search', { recipes, filter });
+    } catch (err) {
+        const errorMessage = getErrorMessage(err);
+        res.status(400).render('404', { error: errorMessage });
+    }
+})
 
 export default recipeController;

@@ -1,0 +1,18 @@
+{{setTitle 'Search Recipes - Forks of Italy'}}
+
+<section class="search-container">
+    <h2>Search Recipes</h2>
+    <form method="get">
+        <input type="text" id="search" name="search" placeholder="Search for recipes..." value="{{filter.search}}">
+        <button type="submit">Search</button>
+    </form>
+    <div class="search-results">
+        {{#each recipes}}
+        {{>recipe}}
+        <!-- Add more search results here -->
+        {{else}}
+        <p class="no-match">There are no recipes found yet!</p>
+        {{/each}}
+
+    </div>
+</section>
