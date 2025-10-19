@@ -1,20 +1,20 @@
 import Recipe from '../models/Recipe.js'
 
 export default {
-    create(formData, userId){
+    create(formData, userId) {
         formData.owner = userId;
         return Recipe.create(formData);
     },
 
-    getAll(){
+    getAll() {
         return Recipe.find();
     },
 
-    getOne(recipeId){
+    getOne(recipeId) {
         return Recipe.findById(recipeId);
     },
 
-    async recomend(userId, recipeId){
+    async recomend(userId, recipeId) {
         const recipe = await Recipe.findById(recipeId);
         if (!recipe) {
             throw new Error('No such recipe');
@@ -32,5 +32,11 @@ export default {
         await recipe.save();
         return recipe;
     },
-    
+
+    edit(postId, recipeData) {
+        const opt = { runValidators: true }
+        const updatedRecipe = Recipe.findByIdAndUpdate(postId, recipeData, opt);
+        return updatedRecipe;
+    },
+
 }
