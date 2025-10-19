@@ -119,8 +119,8 @@
 
  ## Exam steps
   - [x] create Recipe model
-  - [ ] Add create recipes create page
-  - [ ] Add recipesController rout
+  - [x] Add recipesController rout
+  - [x] Add create recipes page
   - [ ] Add recipesController create rout,refactor post form, add recipesService
   - [ ] Add recipes collection page
   - [ ] Add recipes collection rout, service and dynamic data
